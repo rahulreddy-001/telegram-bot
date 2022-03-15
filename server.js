@@ -1,18 +1,10 @@
-var express = require("express");
-
 const { Telegraf } = require("telegraf");
 const TOKEN = "5299987586:AAFnDDwZkwBDOIpLgO2GxCEYfHaltZfRYKY";
 const bot = new Telegraf(TOKEN);
 const { getMatchDetails } = require("./fotData");
-const cors = require("cors");
+
 //________________________________________________________________________________________
 
-const app = express();
-app.get("/", (req, res) => {
-  res.status(200).send("Home Page");
-});
-app.use(express.json());
-app.use(cors());
 var axios = require("axios").default;
 const handleFetchNews = async (msg) => {
   var options = {
