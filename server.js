@@ -3,7 +3,7 @@ var express = require("express");
 const { Telegraf } = require("telegraf");
 const TOKEN = "5299987586:AAFnDDwZkwBDOIpLgO2GxCEYfHaltZfRYKY";
 const bot = new Telegraf(TOKEN);
-// const { getMatchDetails } = require("./fotData");
+const { getMatchDetails } = require("./fotData");
 const cors = require("cors");
 //________________________________________________________________________________________
 
