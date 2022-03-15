@@ -13,9 +13,9 @@
     "axios": "^0.26.1",
     "cors": "^2.8.5",
     "express": "^4.17.3",
+    "fotmob": "^1.0.3",
     "telegraf": "^4.7.0"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rahulreddy-001/telegram-bot.git"
