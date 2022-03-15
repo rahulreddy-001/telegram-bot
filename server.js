@@ -7,12 +7,14 @@ const { getMatchDetails } = require("./fotData");
 const cors = require("cors");
 //________________________________________________________________________________________
 
+app = express();
 app.use(express.json());
 app.use(cors());
+const PORT = process.env.PORT || 5001;
 app.get("/", (req, res) => {
   res.status(200).send("Home Page");
 });
-const PORT = process.env.PORT || 5001;
+
 var axios = require("axios").default;
 const handleFetchNews = async (msg) => {
   var options = {
