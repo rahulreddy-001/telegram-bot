@@ -1,10 +1,15 @@
+var express = require("express");
+
 const { Telegraf } = require("telegraf");
 const TOKEN = "5299987586:AAFnDDwZkwBDOIpLgO2GxCEYfHaltZfRYKY";
 const bot = new Telegraf(TOKEN);
 const { getMatchDetails } = require("./fotData");
-
+const cors = require("cors");
 //________________________________________________________________________________________
 
+app.use(express.json());
+app.use(cors());
+const PORT = process.env.PORT || 5001;
 var axios = require("axios").default;
 const handleFetchNews = async (msg) => {
   var options = {
@@ -152,3 +157,7 @@ bot.action("ligue1", (ctx) => {
 
 //method to start get the script to pulling updates for telegram
 bot.launch();
+
+app.listen(PORT, () => {
+  console.log(`Listening on PORT : ${PORT}`);
+});
