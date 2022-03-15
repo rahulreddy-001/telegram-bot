@@ -158,6 +158,6 @@ bot.command("fotscore", (ctx) => {
 // //method to start get the script to pulling updates for telegram
 // bot.launch();
 
-// app.listen(PORT, () => {
-//   console.log(`Listening on PORT : ${PORT}`);
-// });
+app.listen(PORT, () => {
+  console.log(`Listening on PORT : ${PORT}`);
+});
