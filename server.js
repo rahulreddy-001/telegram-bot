@@ -3,7 +3,7 @@ var express = require("express");
 const { Telegraf } = require("telegraf");
 const TOKEN = "5299987586:AAFnDDwZkwBDOIpLgO2GxCEYfHaltZfRYKY";
 const bot = new Telegraf(TOKEN);
-const { getMatchDetails } = require("./fotData");
+// const { getMatchDetails } = require("./fotData");
 const cors = require("cors");
 //________________________________________________________________________________________
 
@@ -117,47 +117,47 @@ bot.command("fotscore", (ctx) => {
   });
 });
 
-bot.action("champleague", (ctx) => {
-  bot.telegram.sendMessage(
-    ctx.chat.id,
-    "<b>INTERNATIONAL CHAMPIONS LEAGUE</b>",
-    {
-      parse_mode: "HTML",
-    }
-  );
-  getMatchDetails(875880, bot, ctx);
-});
+// bot.action("champleague", (ctx) => {
+//   bot.telegram.sendMessage(
+//     ctx.chat.id,
+//     "<b>INTERNATIONAL CHAMPIONS LEAGUE</b>",
+//     {
+//       parse_mode: "HTML",
+//     }
+//   );
+//   getMatchDetails(875880, bot, ctx);
+// });
 
-bot.action("premierleague", (ctx) => {
-  bot.telegram.sendMessage(ctx.chat.id, "<b>ENGLAND PREMIER LEAGUE</b>", {
-    parse_mode: "HTML",
-  });
-  getMatchDetails(47, bot, ctx);
-});
+// bot.action("premierleague", (ctx) => {
+//   bot.telegram.sendMessage(ctx.chat.id, "<b>ENGLAND PREMIER LEAGUE</b>", {
+//     parse_mode: "HTML",
+//   });
+//   getMatchDetails(47, bot, ctx);
+// });
 
-bot.action("laliga", (ctx) => {
-  bot.telegram.sendMessage(ctx.chat.id, "<b>SPAIN LALIGA</b>", {
-    parse_mode: "HTML",
-  });
-  getMatchDetails(87, bot, ctx);
-});
+// bot.action("laliga", (ctx) => {
+//   bot.telegram.sendMessage(ctx.chat.id, "<b>SPAIN LALIGA</b>", {
+//     parse_mode: "HTML",
+//   });
+//   getMatchDetails(87, bot, ctx);
+// });
 
-bot.action("bundensliga", (ctx) => {
-  bot.telegram.sendMessage(ctx.chat.id, "<b>GERMANY BUNDESLIGA</b>", {
-    parse_mode: "HTML",
-  });
-  getMatchDetails(54, bot, ctx);
-});
-bot.action("ligue1", (ctx) => {
-  bot.telegram.sendMessage(ctx.chat.id, "<b>FRANCE LIGUE 1</b>", {
-    parse_mode: "HTML",
-  });
-  getMatchDetails(53, bot, ctx);
-});
+// bot.action("bundensliga", (ctx) => {
+//   bot.telegram.sendMessage(ctx.chat.id, "<b>GERMANY BUNDESLIGA</b>", {
+//     parse_mode: "HTML",
+//   });
+//   getMatchDetails(54, bot, ctx);
+// });
+// bot.action("ligue1", (ctx) => {
+//   bot.telegram.sendMessage(ctx.chat.id, "<b>FRANCE LIGUE 1</b>", {
+//     parse_mode: "HTML",
+//   });
+//   getMatchDetails(53, bot, ctx);
+// });
 
-//method to start get the script to pulling updates for telegram
-bot.launch();
+// //method to start get the script to pulling updates for telegram
+// bot.launch();
 
-app.listen(PORT, () => {
-  console.log(`Listening on PORT : ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Listening on PORT : ${PORT}`);
+// });
